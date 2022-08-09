@@ -19,3 +19,11 @@ echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.co
 # Lienol/openwrt 包
 sed -i '$a src-git lienol https://github.com/Lancenas/lienol-openwrt-package.git' feeds.conf.default
 sed -i '$a src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git' feeds.conf.default
+#vssr
+sed -i '$a git clone https://github.com/jerrykuku/lua-maxminddb.git' feeds.conf.default 
+sed -i '$a git clone https://github.com/jerrykuku/luci-app-vssr.git' feeds.conf.default 
+mv luci-app-vssr/ package/
+mv lua-maxminddb/ package/
+# Alist
+sed -i '$a git clone https://github.com/sbwml/openwrt-alist --depth=1' feeds.conf.default
+mv openwrt-alist/ package/alist
