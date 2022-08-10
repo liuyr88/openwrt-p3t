@@ -27,3 +27,8 @@ mv lua-maxminddb/ package/
 # Alist
 git clone https://github.com/sbwml/openwrt-alist --depth=1
 mv openwrt-alist/ package/alist
+#smartdns
+git clone https://github.com/pymumu/openwrt-smartdns.git
+mv openwrt-smartdns/ package/smartdns 
+git clone -b lede https://github.com/pymumu/luci-app-smartdns.git 
+mv luci-app-smartdns/ package/
